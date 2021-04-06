@@ -8,7 +8,7 @@ const cakeReducer = (state = initialCakeState, action) => {
         return {
           // ...state = to maintain original state in a copy and update only numOfCake and not the actual state
           ...state,
-          numOfCakes: state.numOfCakes - 1
+          numOfCakes: state.numOfCakes - action.payload
         };
       default:
         return state;
